@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="top.suzuki.sukawallet">
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="36" />
+    <queries>
+        <package android:name="dev.minicard.wallet" />
+        <package android:name="com.miui.tsmclient" />
+        <package android:name="com.xiaomi.account" />
+        <package android:name="com.android.settings" />
+    </queries>
+    <application android:name=".WalletApp" android:usesCleartextTraffic="false" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:theme="@style/AppTheme" android:allowBackup="false" android:supportsRtl="true">
+        <activity android:name=".PatternActivity" android:exported="false" />
+        <activity android:name=".AboutActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
